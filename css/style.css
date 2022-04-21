@@ -1,0 +1,383 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.menuNav {
+    grid-area: menuNav;
+    display: grid;
+    grid-template-columns: 12% 70% 18%;
+    grid-template-areas:
+    "logo botonera menuBotones"
+    ;
+    position: fixed;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    align-items: center;
+    background-color:rgb(50, 41, 124);
+    color: bisque;
+    width: 100%;
+    height: 48px;
+    border-bottom: 1px black solid;
+    top: 0px;
+    z-index: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menuNav a:hover,
+.menuNav li:hover {
+    color: black;
+}
+
+.menuNav .logo {
+    display: inline-flex;
+    background-color: bisque;
+    color:rgb(50, 41, 124);
+    padding: 15px;
+    height: 18px;
+    overflow: hidden;
+    grid-area: logo;
+    border-bottom: 1px black solid;
+}
+
+.botonera {
+    list-style: none;
+    display: inline-flex;
+    padding: 15px;
+    justify-content: center;
+    grid-area: botonera;
+}
+.botonera a {
+    text-decoration: none;
+    padding: 15px;
+    color: bisque;
+}
+.botonera li:hover ul {
+    display: block;
+}
+
+.botonera2 {
+    display: none;
+    position: absolute;
+    background-color:rgb(50, 41, 124);
+    padding: 5px;
+    border: solid 1.5px black
+}
+.botonera2 li {
+    display: block;
+    padding: 10px;
+}
+
+.menuBotones {
+    list-style: none;
+    display: inline-flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    grid-area: menuBotones;
+}
+.menuBotones a {
+    color: bisque;
+    text-decoration: none;
+}
+
+.cuerpo {
+    display: grid;
+    grid-template-columns: 18% 64% 18%;
+    grid-template-rows: 3rem 138rem 7rem;
+    grid-template-areas:
+    "menuNav menuNav menuNav"
+    "columnaIzq centro columnaDer"
+    "footer footer footer"
+    ;
+}
+
+.columnaIzq {
+    grid-area: columnaIzq;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color:rgba(51, 41, 124, 0.6);
+    padding: 25px;
+    border: solid 1px black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.columnaIzq a {
+    color: black;
+    text-decoration: none;
+    padding: 25px;
+    overflow: hidden;
+}
+.columnaIzq ul {
+    list-style: none;
+    margin-top: 50px;
+    border: double 1px black;
+    background-color: bisque;
+}
+.columnaIzq li {
+    padding: 12px 0px 12px 0px;
+}
+.columnaIzq a:hover {
+    color:rgb(50, 41, 124)
+}
+
+.columnaDer {
+    grid-area: columnaDer;
+    text-align: center;
+    padding: 25px;
+    background-color:rgba(51, 41, 124, 0.6);
+    overflow: hidden;
+    border: solid 1px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.columnaDer p {
+    padding-bottom: 15px;
+}
+
+.publicidad {
+    margin-top: 100px;
+}
+
+.centro {
+    grid-area: centro; 
+    padding: 20px;
+    background-color: bisque;
+    color:rgb(50, 41, 124);
+    border-bottom: solid 1px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.noticiaInicio {
+    display: flex;
+    margin: 20px;
+}
+.noticiaInicio h2 {
+    padding-bottom: 10px;
+}
+.textoNoticia {
+    padding-right: 30px;
+}
+.segundaNoticia {
+    margin: 140px 20px 20px 20px;
+}
+.segundaNoticia h2,
+.segundaNoticia p {
+    padding-bottom: 15px;
+}
+.centroDeportes {
+    padding: 20px;
+    background-color: bisque;
+    color:rgb(50, 41, 124);
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.centroDeportes ul {
+    list-style: none;
+}
+.centroDeportes a {
+    text-decoration: none;
+}
+.centroDeportes a:hover {
+    color: black;
+}
+.centroDeportes h2 {
+    margin-bottom: 10px;
+}
+.futbol,
+.basket,
+.tenis,
+.rugby {
+    width: 40%;
+    padding: 20px 20px 50px 20px;
+}
+
+.noticia1,
+.noticia2,
+.noticia3 {
+    margin-bottom: 35px;
+}
+.noticia1 video,
+.noticia2 video,
+.noticia3 video {
+    margin-left: 15px;
+}
+.noticia1 h2,
+.noticia1 p,
+.noticia2 h2,
+.noticia2 p,
+.noticia3 h2,
+.noticia3 p {
+    margin: 15px;
+}
+
+.formulario {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+.formulario2 {
+    width: 100%;
+}
+
+.nombreApellido, 
+.email, 
+.equipo,
+.opinion,
+.novedades {
+    padding: 10px 0px 10px 10px;
+    display: block;
+    width: 100%;
+}
+.nombreApellido input, 
+.email input {
+    width: 40%;
+}
+.botonEnviar {
+    margin: 10px;
+    padding: 2px;
+}
+
+.iniciarSesion {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+    padding-bottom: 40px;
+}
+.iniciarSesion img{
+    margin: 35px;
+}
+
+.usuarioContraseña {
+    margin-bottom: 15px;
+}
+.usuarioContraseña input{
+    display: block;
+    padding: 8px;
+    margin: 5px;
+}
+.botonIniciar,
+.botonOlvide {
+    padding: 8px;
+    margin: 5px;
+    width: 150px;
+}
+
+.textoCuenta {
+    text-align: center;
+    margin: 30px;
+    padding: 30px;
+}
+.crearCuenta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.crearUsuario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.crearUsuario input {
+    display: block;
+    padding: 8px;
+    margin: 8px;
+    width: 60%;
+}
+
+.crearCuenta .terminos {
+    margin: 15px;
+}
+.botonCuenta {
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.footer {
+    display: flex;
+    grid-area: footer;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(50, 41, 124);
+    color: bisque;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.logoFooter {
+    text-align: center;
+}
+
+.redesFooter {
+    display: inline-block;
+}
+
+.redes {
+    list-style: none;
+}
+.redes a {
+    text-decoration: none;
+    color: bisque;
+}
+
+
+/* Vista Mobile */
+
+@media screen and (max-width: 768px){
+    .menuNav {
+        grid-area: menuNav;
+        display: grid;
+        grid-template-columns: 12% 70% 18%;
+        grid-template-areas:
+        "logo botonera menuBotones"
+        ;
+        position: fixed;
+        flex-wrap: nowrap;
+        justify-content: stretch;
+        align-items: center;
+        background-color:rgb(50, 41, 124);
+        color: bisque;
+        width: 100%;
+        height: 48px;
+        border-bottom: 1px black solid;
+        top: 0px;
+        z-index: 1;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .menuNav .logo {
+        grid-area: logo;
+    }
+    .botonera {
+        grid-area: botonera;
+    }
+    .menuBotones {
+        grid-area: menuBotones;
+    }
+
+    .cuerpo {
+        display: grid;
+        grid-template-columns: 18% 82%;
+        grid-template-rows: 3rem 138rem 7rem;
+        grid-template-areas:
+        "menuNav menuNav"
+        "centro centro"
+        "footer footer"
+        ;
+    }
+    .centro {
+        grid-area: centro;
+        border-left: 10px solid rgb(50, 41, 124);
+        border-right: 10px solid rgb(50, 41, 124);
+    }
+    .columnaDer {
+        display: none;
+    }
+    .columnaIzq {
+        display: none;
+    }
+    
+    .footer {
+        grid-area: footer;
+    }
+}
